@@ -4,9 +4,11 @@ metadata:
   name: ingress-web-canary
   annotations:
     ingress.kubernetes.io/rewrite-target: /
+#    nginx.ingress.kubernetes.io/canary: "true"
     nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-by-header: "canary"
-    nginx.ingress.kubernetes.io/canary-by-header-value: "always"
+    nginx.ingress.kubernetes.io/canary-weight: "20"
+#    nginx.ingress.kubernetes.io/canary-by-header: "canary"
+#    nginx.ingress.kubernetes.io/canary-by-header-value: "always"
 spec:
   rules:
   - host: k8s.pavlov.com
