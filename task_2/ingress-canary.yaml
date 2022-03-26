@@ -5,8 +5,8 @@ metadata:
   annotations:
     ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-by-header: "x-region"
-    nginx.ingress.kubernetes.io/canary-by-header-value: "us-east"
+    nginx.ingress.kubernetes.io/canary-by-header: "canary"
+    nginx.ingress.kubernetes.io/canary-by-header-value: "always"
 spec:
   rules:
   - host: k8s.pavlov.com
