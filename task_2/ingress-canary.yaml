@@ -5,7 +5,7 @@ metadata:
   annotations:
     ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-weight: "20"
+    nginx.ingress.kubernetes.io/canary-weight: "10"
 #    nginx.ingress.kubernetes.io/canary-by-header: "canary"
 #    nginx.ingress.kubernetes.io/canary-by-header-value: "always"
 spec:
