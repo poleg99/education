@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-web-canary
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-by-header: "x-region"
+    nginx.ingress.kubernetes.io/canary-by-header-value: "us-east"
+spec:
+  rules:
+  - host: k8s.pavlov.com
+    http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
+             name: web-2
+             port:
+              number: 80

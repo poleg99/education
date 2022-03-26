@@ -7,10 +7,10 @@ data:
         default_type text/plain;
 
         location / {
-            return 200 '$hostname Ver1.0\n';
+            return 200 '$hostname Ver2.0\n';
         }
     }
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: nginx-configmap
+  name: nginx-configmap-canary

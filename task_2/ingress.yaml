@@ -6,12 +6,13 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
+  - host: k8s.pavlov.com
+    http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
              name: web
-             port: 
-                number: 80
+             port:
+              number: 80
