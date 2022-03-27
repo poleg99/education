@@ -19,4 +19,4 @@ spec:
            service:
              name: web-2
              port:
-              number: 80
+               number: 80
