@@ -4,10 +4,10 @@ data:
     server {
         listen 80 default_server;
         server_name _;
-        default_type text/plain;
+        default_type application/json;
 
         location / {
-            return 200 '$hostname Ver1.0\n';
+            return 200 '{"node":"minikube","namespace":"default","deployment":"stable Ver1.0","pod": "$hostname"}\n';
         }
     }
 kind: ConfigMap
