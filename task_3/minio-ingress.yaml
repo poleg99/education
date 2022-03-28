@@ -16,3 +16,10 @@ spec:
              name: minio-app
              port:
               number: 9001
+       - path: /web
+         pathType: Prefix
+         backend:
+           service:
+             name: web
+             port:
+              number: 80
