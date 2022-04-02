@@ -1,0 +1,17 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+ name: edit-role
+ namespace: default
+rules:
+ - apiGroups: ["*"]
+   resources: ["deployments","pods","pods/exec"]
+   verbs:
+    - create
+    - get
+    - delete
+    - list
+    - update
+    - edit
+    - watch
+    - exec

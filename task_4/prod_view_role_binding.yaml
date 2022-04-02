@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+ name: prod_view_user
+ namespace: prod
+subjects:
+ - apiGroup: rbac.authorization.k8s.io
+   kind: User
+   name: prod_view
+   namespace: prod
+roleRef:
+  kind: ClusterRole
+  name: view
+  apiGroup: rbac.authorization.k8s.io
